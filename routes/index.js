@@ -122,6 +122,7 @@ router.get('/quizzes/:quizId(\\d+)/check', quizController.check);
 
 
 
+
 router.post('/quizzes/:quizId(\\d+)/tips',
     sessionController.loginRequired,
     tipController.create);
@@ -134,5 +135,9 @@ router.delete('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)',
     quizController.adminOrAuthorRequired,
     tipController.destroy);
 
+
+
+router.get('/quizzes/randomplay',         quizController.randomplay);
+router.get('/quizzes/randomcheck/:quizId(\\d+)', quizController.randomcheck);
 
 module.exports = router;
