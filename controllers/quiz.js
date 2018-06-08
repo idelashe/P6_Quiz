@@ -26,7 +26,7 @@ exports.load = (req, res, next, quizId) => {
     .catch(error => next(error));
 };
 
-
+//qsqdqdq
 // MW that allows actions only if the user logged in is admin or is the author of the quiz.
 exports.adminOrAuthorRequired = (req, res, next) => {
 
